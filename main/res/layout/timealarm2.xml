@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:layout_width="146dp"
+        android:layout_height="364dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="145dp"
+            android:layout_height="35dp"
+            android:text="30분"
+            tools:layout_editor_absoluteX="87dp"
+            tools:layout_editor_absoluteY="100dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="145dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="45분" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="145dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="1시간" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="145dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="1시간 30분" />
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="145dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="2시간" />
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="145dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="2시간 30분" />
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="145dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="3시간" />
+
+        <RadioButton
+            android:id="@+id/radioButton9"
+            android:layout_width="145dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="3시간 30분" />
+
+        <RadioButton
+            android:id="@+id/radioButton10"
+            android:layout_width="145dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="4시간" />
+
+        <RadioButton
+            android:id="@+id/radioButton11"
+            android:layout_width="145dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="5시간" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="191dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="일정시간을 선택하세요"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
