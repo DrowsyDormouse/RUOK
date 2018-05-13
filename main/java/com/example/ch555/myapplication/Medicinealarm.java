@@ -8,9 +8,11 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.FileObserver;
+import android.os.PowerManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -43,7 +45,10 @@ public class Medicinealarm extends AppCompatActivity{
                 setAlarm(calendar.getTimeInMillis());
             }
         });
+
+
     }
+
 
     private void setAlarm(long time){
         AlarmManager am = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
@@ -52,6 +57,6 @@ public class Medicinealarm extends AppCompatActivity{
         PendingIntent pi = PendingIntent.getBroadcast(this, 0, i, 0);
 
         am.setRepeating(AlarmManager.RTC,time,AlarmManager.INTERVAL_DAY,pi);
-        Toast.makeText(this, "Alarm is set", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "알람이 설정 되었습니다.", Toast.LENGTH_SHORT).show();
     }
 }

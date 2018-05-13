@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ch555.myapplication">
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -12,35 +15,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBYVWxzGP0e6cB-eDrRusRaaOTI2yjuSvM"/>
+            android:value="AIzaSyBYVWxzGP0e6cB-eDrRusRaaOTI2yjuSvM" />
 
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
 
-        </activity>
-        <receiver android:name="AlarmReceiver"
+        <receiver
+            android:name=".AlarmReceiver"
             android:enabled="true"
-            android:exported="true"/>
-        <activity android:name=".reliefarea"/>
-        <activity android:name=".timealarm1"/>
-        <activity android:name=".memo"/>
-        <activity android:name=".alarmlist"/>
-        <activity android:name=".Medicinealarm"/>
-        <activity android:name=".memolist"/>
-        <activity android:name=".timealarm2"/>
+            android:exported="true" />
+
+        <activity android:name=".reliefarea" />
+        <activity android:name=".timealarm1" />
+        <activity android:name=".memo" />
+        <activity android:name=".alarmlist" />
+        <activity android:name=".Medicinealarm" />
+        <activity android:name=".memolist" />
+        <activity android:name=".timealarm2" />
+        <activity android:name=".Login" />
+        <activity android:name=".Register" />
+        <activity android:name=".settinglist" />
+        <activity android:name=".ReliefareaAlarm"></activity>
     </application>
 
 </manifest>
