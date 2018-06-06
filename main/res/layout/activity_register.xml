@@ -119,20 +119,6 @@
         app:layout_constraintTop_toBottomOf="@+id/ptname" />
 
     <EditText
-        android:id="@+id/addtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:ems="10"
-        android:hint="주소"
-        android:inputType="textPostalAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agetext" />
-
-    <EditText
         android:id="@+id/ratingtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -145,6 +131,19 @@
         app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addtext" />
+
+    <EditText
+        android:id="@+id/addtext"
+        android:layout_width="216dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="주소검색을 위해 한 번 더 누르기"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agetext" />
 
     <Button
         android:id="@+id/SingIn"
@@ -161,5 +160,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.982" />
+
+
 
 </android.support.constraint.ConstraintLayout>

@@ -22,7 +22,7 @@ public class Register extends AppCompatActivity {
 
         EditText ptname = (EditText)findViewById(R.id.ptname);
         EditText agetext = (EditText)findViewById(R.id.agetext);
-        EditText addtext = (EditText)findViewById(R.id.addtext);
+        //TextView addtext = (TextView) findViewById(R.id.addtext);
         EditText ratingtext = (EditText)findViewById(R.id.ratingtext);
 
         Button SignIn = (Button) findViewById(R.id.SingIn);
@@ -33,5 +33,16 @@ public class Register extends AppCompatActivity {
                 startActivity(intent); // 다음 화면으로 넘어간다
             }
         });
+
+        EditText textView = (EditText) findViewById(R.id.addtext);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Register.this, Adsearch.class); // 다음 넘어갈 클래스 지정
+                startActivity(intent); // 다음 화면으로 넘어간다
+            }
+        });
     }
+
+
 }

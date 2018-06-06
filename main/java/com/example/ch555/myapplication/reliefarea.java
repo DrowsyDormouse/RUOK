@@ -1,13 +1,18 @@
 package com.example.ch555.myapplication;
 
 import android.app.FragmentManager;
+import android.app.RemoteAction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -29,6 +34,39 @@ public class reliefarea extends AppCompatActivity implements OnMapReadyCallback 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reliefarea);
 
+        final Button a = (Button)findViewById(R.id.button);
+        a.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(reliefarea.this, Adsearch.class);
+                startActivity(i);
+            }
+        });
+        final Switch sw = (Switch)findViewById(R.id.switch2);
+        sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(sw.isChecked()) {
+                    a.setEnabled(true);
+                }
+                else {
+                    a.setEnabled(false);
+                }
+            }
+
+        });
+
+    }
+
+    private void setViewAndChildrenEnable(View view, boolean enabled) {
+        view.setEnabled(enabled);
+        if (view instanceof ViewGroup){
+            ViewGroup viewGroup = (ViewGroup)view;
+            for(int i=0;i<viewGroup.getChildCount();i++){
+                View child = viewGroup.getChildAt(i);
+                setViewAndChildrenEnable(child,enabled);
+            }
+        }
     }
 
     public void onMapReady(final GoogleMap map) {

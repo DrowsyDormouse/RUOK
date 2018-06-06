@@ -38,7 +38,7 @@ public class memolist extends AppCompatActivity {
         MyAdapter myAdapter = new MyAdapter();
 
         for (int i=0;i<10;i++){
-            myAdapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.call), "name_" + i, "contents_" + i);
+            myAdapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.pen), "name_" + i, "contents_" + i);
         }
 
         listView.setAdapter(myAdapter);
