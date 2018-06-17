@@ -8,6 +8,7 @@
  $hour = $_POST['u_h'];
  $minute = $_POST['u_mn'];
  $body = $_POST['u_body'];
+ $dist = $_POST['u_dist'];
  $memoTable = $id."_memo";
  $mId = rand(000000, 999999);
 
@@ -17,20 +18,20 @@
  {
   $row = mysqli_fetch_array($result);
   if(is_null($row)){
-    $sql_1 = "CREATE TABLE $memoTable(no INT(12) NOT NULL, info DATETIME NOT NULL, body VARCHAR(255) NOT NULL, PRIMARY KEY(no));";
+    $sql_1 = "CREATE TABLE $memoTable(no INT(12) NOT NULL, info DATETIME NOT NULL, body VARCHAR(255) NOT NULL, dist VARCHAR(25), PRIMARY KEY(no));";
     $result_1 = mysqli_query($connect, $sql_1);
     if($result_1){
-      $sql_2 = "INSERT INTO $memoTable VALUES ('$mId','$year-$month-$day $hour:$minute:00', '$body');";
+      $sql_2 = "INSERT INTO $memoTable VALUES ('$mId','$year-$month-$day $hour:$minute:00', '$body', '$dist');";
       $result_2 = mysqli_query($connect, $sql_2);
       if($result_2)
-         echo "ÀÔ·Â ¼º°ø1";
+         echo "ìž…ë ¥ ì„±ê³µ1";
       else
-         echo "ÀÔ·Â ½ÇÆÐ1";
-    }else{ echo "Å×ÀÌºí »ý¼º ½ÇÆÐ"; }
+         echo "ìž…ë ¥ ì‹¤íŒ¨1";
+    }else{ echo "í…Œì´ë¸” ìƒì„± ì‹¤íŒ¨"; }
   }else{
-    $sql_3 = "INSERT INTO $memoTable VALUES ('$mId','$year-$month-$day $hour:$minute:00','$body');";
+    $sql_3 = "INSERT INTO $memoTable VALUES ('$mId','$year-$month-$day $hour:$minute:00','$body', '$dist');";
     $result_3 = mysqli_query($connect, $sql_3);
-    if($result_3){ echo "ÀÔ·Â ¼º°ø2/"."$year-$month-$day $hour:$minute:00"."$memoTable";}
-    else{ echo "ÀÔ·Â ½ÇÆÐ2";}}
- }else{ echo "Å×ÀÌºí °Ë»ö ½ÇÆÐ"; }
+    if($result_3){ echo "ìž…ë ¥ ì„±ê³µ2/"."$year-$month-$day $hour:$minute:00"."$memoTable";}
+    else{ echo "ìž…ë ¥ ì‹¤íŒ¨2";}}
+ }else{ echo "í…Œì´ë¸” ê²€ìƒ‰ ì‹¤íŒ¨"; }
 ?>
