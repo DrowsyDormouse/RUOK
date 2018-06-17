@@ -3,7 +3,7 @@
   $id = $_POST['u_id'];
   $memo = $id."_memo";
 
-  $sql = "SELECT info, body FROM $memo;";
+  $sql = "SELECT info, body, dist FROM $memo ORDER BY info DESC;";
 
   $result = mysqli_query($connect, $sql);
   $total_record = mysqli_num_rows($result);
@@ -17,7 +17,8 @@
 
      $row_array = array(
         "time" => $row['info'],
-        "body" => $row['body']
+        "body" => $row['body'],
+        "dist" => $row['dist']
      );
      array_push($result_array, $row_array);
   }
